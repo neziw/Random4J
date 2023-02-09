@@ -19,7 +19,6 @@ class Random4J : JFrame() {
         setLocationRelativeTo(null)
         isResizable = false
         layout = BorderLayout()
-
         val inputPanel = JPanel()
         inputPanel.layout = GridLayout(2, 2, 5, 5)
         inputPanel.add(JLabel("Minimum number:"))
@@ -29,12 +28,10 @@ class Random4J : JFrame() {
         val toField = JTextField()
         inputPanel.add(toField)
         add(inputPanel, BorderLayout.NORTH)
-
         display.isEditable = false
         display.horizontalAlignment = SwingConstants.RIGHT
         display.preferredSize = Dimension(150, 50)
         add(display, BorderLayout.CENTER)
-
         generateButton.addActionListener {
             val from = fromField.text.toInt()
             val to = toField.text.toInt()
